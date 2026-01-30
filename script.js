@@ -113,23 +113,32 @@ function filterCategories(id) {
 const modal = document.getElementById("treatmentModal");
 const closeModal = document.getElementById("closeModal");
 
+function trackUmamiEvent(eventName, props) {
+  if (window.umami && typeof umami.track === "function") {
+    umami.track(eventName, props);
+  } else {
+    // Se Umami non è pronto, riprova tra 50ms
+    setTimeout(() => trackUmamiEvent(eventName, props), 50);
+  }
+}
+
 function openTreatmentModal(t, categoria, sezione) {
   document.getElementById("modalTitle").textContent = t.name;
   document.getElementById("modalMeta").textContent = `${t.price}€ · ${t.duration}`;
   document.getElementById("modalDescription").textContent = t.description;
   document.getElementById("modalImage").src = t.image;
   modal.classList.add("open");
+
   console.log("MODAL APERTO", t.name, categoria, sezione);
 
-  if (typeof window.umami === "function") {
-    window.umami && umami.track("Trattamento aperto", {
-      nome: t.name,
-      categoria: categoria,
-      sezione: sezione,
-      prezzo: t.price
-    });
-  }
+  trackUmamiEvent("Trattamento aperto", {
+    nome: t.name,
+    categoria: categoria,
+    sezione: sezione,
+    prezzo: t.price
+  });
 }
+
 
 closeModal.onclick = () => modal.classList.remove("open");
 modal.onclick = e => {
