@@ -119,6 +119,14 @@ function openTreatmentModal(t) {
   document.getElementById("modalDescription").textContent = t.description;
   document.getElementById("modalImage").src = t.image;
   modal.classList.add("open");
+  if (window.umami) {
+    umami.track("Trattamento aperto", {
+      nome: t.name,
+      prezzo: t.price,
+      categoria: document
+        .querySelector(".filter-btn.active span")?.textContent || "Tutti"
+    });
+  }
 }
 
 closeModal.onclick = () => modal.classList.remove("open");
