@@ -119,6 +119,8 @@ function openTreatmentModal(t, categoria, sezione) {
   document.getElementById("modalDescription").textContent = t.description;
   document.getElementById("modalImage").src = t.image;
   modal.classList.add("open");
+  console.log("MODAL APERTO", t.name, categoria, sezione);
+
   if (typeof window.umami === "function") {
     window.umami("Trattamento aperto", {
       nome: t.name,
