@@ -69,7 +69,7 @@ function buildTreatments(categories) {
       section.treatments.forEach(t => {
         const div = document.createElement("div");
         div.className = "treatment";
-        div.onclick = () => openTreatmentModal(t);
+        div.onclick = () => openTreatmentModal(t, cat.label, section.title);
 
         div.innerHTML = `
           <div class="treatment-header">
@@ -113,7 +113,7 @@ function filterCategories(id) {
 const modal = document.getElementById("treatmentModal");
 const closeModal = document.getElementById("closeModal");
 
-function openTreatmentModal(t) {
+function openTreatmentModal(t, categoria, sezione) {
   document.getElementById("modalTitle").textContent = t.name;
   document.getElementById("modalMeta").textContent = `${t.price}€ · ${t.duration}`;
   document.getElementById("modalDescription").textContent = t.description;
@@ -122,6 +122,8 @@ function openTreatmentModal(t) {
   if (typeof window.umami === "function") {
     window.umami("Trattamento aperto", {
       nome: t.name,
+      categoria: categoria,
+      sezione: sezione,
       prezzo: t.price
     });
   }
