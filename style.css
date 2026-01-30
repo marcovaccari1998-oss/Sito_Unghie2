@@ -28,7 +28,7 @@ body {
 }
 .site-title {
   margin-top: 4px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display SC', serif;
   letter-spacing: 1.5px;
 }
 .address {
@@ -295,4 +295,5 @@ body {
 .instagram-link:hover img {
   opacity: 1;
   transform: scale(1.05);
+
 }
