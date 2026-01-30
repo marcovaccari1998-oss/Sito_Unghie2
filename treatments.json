@@ -1,0 +1,327 @@
+{
+  "categories": [
+    {
+      "id": "unghie",
+      "label": "Manicure e Pedicure",
+      "icon": "icons/unghia.svg",
+      "sections": [
+        {
+          "title": "Manicure",
+          "fromPrice": 20,
+          "treatments": [
+            {
+              "name": "Kombi Manicure",
+              "price": 20,
+              "duration": "30 min",
+              "description": "Trattamento professionale eseguito con prodotti di alta qualità per garantire un risultato estetico curato e duraturo.",
+              "image": "Img_Trattamenti/Manicure_Ad_Olio/2.jpg"
+            },
+            {
+              "name": "Manicure ad olio",
+              "price": 25,
+              "duration": "30 min",
+              "description": "Trattamento professionale eseguito con prodotti di alta qualità per garantire un risultato estetico curato e duraturo.",
+              "image": "Img_Trattamenti/Kombi_Manicure/1.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Semipermanente",
+          "fromPrice": 34,
+          "treatments": [
+            {
+              "name": "Semipermanente",
+              "price": 34,
+              "duration": "45 min",
+              "description": "Applicazione di smalto semipermanente con preparazione dell’unghia per un risultato ordinato e resistente.",
+              "image": "logo.png"
+            },
+            {
+              "name": "Semipermanente rinforzato",
+              "price": 38,
+              "duration": "50 min",
+              "description": "Applicazione di smalto semipermanente rinforzato per una maggiore resistenza dell’unghia naturale.",
+              "image": "logo.png"
+            },
+            {
+              "name": "Semipermanente piedi",
+              "price": 40,
+              "duration": "45 min",
+              "description": "Trattamento semipermanente dedicato alle unghie dei piedi per un risultato ordinato e duraturo.",
+              "image": "logo.png"
+            },
+            {
+              "name": "Rimozione",
+              "price": 8,
+              "duration": "15 min",
+              "description": "Rimozione professionale del prodotto senza danneggiare l’unghia naturale.",
+              "image": "logo.png"
+            }
+          ]
+        },
+        {
+          "title": "Copertura in gel",
+          "fromPrice": 50,
+          "notes": {
+            "*": "Su unghie prive di prodotto precedente",
+            "**": "Corto <1,5 cm · Medio 1,5–2 cm · Lungo >2 cm"
+          },
+          "treatments": [
+            {
+              "name": "Copertura in gel*",
+              "price": 50,
+              "duration": "60 min",
+              "description": "Copertura in gel su unghia naturale per rinforzare e uniformare la struttura.",
+              "image": "logo.png"
+            },
+            {
+              "name": "Refill corto**",
+              "price": 50,
+              "duration": "60 min",
+              "description": "Refill correttivo su lunghezza corta per mantenere la struttura in gel.",
+              "image": "logo.png"
+            },
+            {
+              "name": "Refill medio**",
+              "price": 55,
+              "duration": "70 min",
+              "description": "Refill correttivo su lunghezza media per mantenere la struttura in gel.",
+              "image": "logo.png"
+            },
+            {
+              "name": "Refill lungo**",
+              "price": 60,
+              "duration": "80 min",
+              "description": "Refill correttivo su lunghezza lunga per mantenere la struttura in gel.",
+              "image": "logo.png"
+            },
+            {
+              "name": "Ricostruzione",
+              "price": "da 65",
+              "duration": "90 min",
+              "description": "Ricostruzione completa dell’unghia con tecnica professionale.",
+              "image": "logo.png"
+            },
+            {
+              "name": "1 unghia",
+              "price": 3,
+              "duration": "10 min",
+              "description": "Intervento singolo su unghia danneggiata o da riparare.",
+              "image": "logo.png"
+            },
+            {
+              "name": "Rimozione",
+              "price": 10,
+              "duration": "20 min",
+              "description": "Rimozione del gel eseguita in sicurezza per l’unghia naturale.",
+              "image": "logo.png"
+            }
+          ]
+        },
+        {
+          "title": "Muretto o stiletto",
+          "fromPrice": 90,
+          "treatments": [
+            {
+              "name": "Muretto o stiletto",
+              "price": "da 90",
+              "duration": "120 min",
+              "description": "Ricostruzione avanzata con forma muretto o stiletto per un risultato scenografico.",
+              "image": "logo.png"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "specializzati",
+      "label": "Trattamenti Specializzati",
+      "icon": "icons/ciglia.svg",
+      "sections": [
+        {
+          "title": "Laminazione ciglia",
+          "fromPrice": 45,
+          "notes": {
+            "*": "Refill valido se effettuato tra 40 e 60 giorni dalla prima seduta"
+          },
+          "treatments": [
+            {
+              "name": "Laminazione ciglia 1ª seduta",
+              "price": 60,
+              "duration": "75 min",
+              "description": "Trattamento di laminazione per incurvare, nutrire e definire le ciglia naturali.",
+              "image": "logo.png"
+            },
+            {
+              "name": "Laminazione ciglia refill*",
+              "price": 45,
+              "duration": "60 min",
+              "description": "Seduta di mantenimento della laminazione ciglia.",
+              "image": "logo.png"
+            }
+          ]
+        },
+        {
+          "title": "PMU sopracciglia / labbra",
+          "fromPrice": 100,
+          "treatments": [
+            {
+              "name": "PMU sopracciglia / labbra",
+              "price": 200,
+              "duration": "150 min",
+              "description": "Trucco permanente per definire sopracciglia o labbra.",
+              "image": "logo.png"
+            },
+            {
+              "name": "1° ritocco",
+              "price": 100,
+              "duration": "90 min",
+              "description": "Ritocco iniziale per perfezionare il trattamento PMU.",
+              "image": "logo.png"
+            },
+            {
+              "name": "Ritocco annuale",
+              "price": 170,
+              "duration": "120 min",
+              "description": "Ritocco annuale per mantenere il colore e la definizione.",
+              "image": "logo.png"
+            }
+          ]
+        },
+        {
+          "title": "PMU eyeliner",
+          "fromPrice": 100,
+          "treatments": [
+            {
+              "name": "PMU eyeliner",
+              "price": 180,
+              "duration": "150 min",
+              "description": "Trucco permanente eyeliner per definire lo sguardo.",
+              "image": "logo.png"
+            },
+            {
+              "name": "1° ritocco",
+              "price": 100,
+              "duration": "90 min",
+              "description": "Ritocco iniziale dell’eyeliner.",
+              "image": "logo.png"
+            },
+            {
+              "name": "Ritocco annuale",
+              "price": 150,
+              "duration": "120 min",
+              "description": "Ritocco annuale per mantenere il colore dell’eyeliner.",
+              "image": "logo.png"
+            }
+          ]
+        },
+        {
+          "title": "Fine Line Tattoo",
+          "fromPrice": 50,
+          "treatments": [
+            {
+              "name": "Fine Line tattoo",
+              "price": "da 50",
+              "duration": "90 min",
+              "description": "Tatuaggio fine line delicato e minimale.",
+              "image": "logo.png"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "estetica",
+      "label": "Estetica",
+      "icon": "icons/viso.svg",
+      "sections": [
+        {
+          "title": "Epilazione viso",
+          "fromPrice": 5,
+          "treatments": [
+            {
+              "name": "Epilazione sopracciglia",
+              "price": 5,
+              "duration": "10 min",
+              "description": "Epilazione professionale delle sopracciglia.",
+              "image": "logo.png"
+            },
+            {
+              "name": "Epilazione baffetti",
+              "price": 5,
+              "duration": "10 min",
+              "description": "Epilazione delicata dei baffetti.",
+              "image": "logo.png"
+            },
+            {
+              "name": "Epilazione viso",
+              "price": 10,
+              "duration": "15 min",
+              "description": "Epilazione completa del viso.",
+              "image": "logo.png"
+            }
+          ]
+        },
+        {
+          "title": "Epilazione corpo",
+          "fromPrice": 15,
+          "notes": {
+            "*": "Eseguita con cera brasiliana"
+          },
+          "treatments": [
+            {
+              "name": "Inguine totale*",
+              "price": 30,
+              "duration": "30 min",
+              "description": "Epilazione inguine totale con cera brasiliana.",
+              "image": "logo.png"
+            },
+            {
+              "name": "Inguine bikini*",
+              "price": 25,
+              "duration": "25 min",
+              "description": "Epilazione inguine bikini con cera brasiliana.",
+              "image": "logo.png"
+            },
+            {
+              "name": "Ascelle*",
+              "price": 15,
+              "duration": "15 min",
+              "description": "Epilazione ascelle con cera brasiliana.",
+              "image": "logo.png"
+            }
+          ]
+        },
+        {
+          "title": "Massaggi",
+          "fromPrice": 45,
+          "treatments": [
+            {
+              "name": "Massaggio relax schiena 25′",
+              "price": 45,
+              "duration": "25 min",
+              "description": "Massaggio rilassante localizzato sulla schiena.",
+              "image": "logo.png"
+            },
+            {
+              "name": "Massaggio relax 50′",
+              "price": 65,
+              "duration": "50 min",
+              "description": "Massaggio rilassante completo.",
+              "image": "logo.png"
+            },
+            {
+              "name": "Massaggio eminfatico gambe 35′",
+              "price": 55,
+              "duration": "35 min",
+              "description": "Massaggio drenante per le gambe.",
+              "image": "logo.png"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
