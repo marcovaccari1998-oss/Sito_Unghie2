@@ -24,13 +24,16 @@ function createFilterButton(label, id, isActive = false) {
   btn.className = "filter-btn";
   if (isActive) btn.classList.add("active");
 
-  btn.innerHTML = `<span>${label}</span>`;
-  btn.addEventListener("click", () => {
-    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    filterCategories(id);
-    trackUmamiEvent("Filtro cliccato", { filtro: label });
-  });
+    btn.innerHTML = `<span>${cat.label}</span>`;
+    if (cat.icon) {
+      const img = document.createElement("img");
+      img.src = cat.icon;
+      img.alt = cat.label;
+      img.style.width = "20px"; // opzionale, meglio gestire in CSS
+      img.style.height = "20px";
+      img.style.marginLeft = "5px";
+      btn.appendChild(img);
+    }
 
   return btn;
 }
