@@ -122,7 +122,7 @@ function openTreatmentModal(t, categoria, sezione) {
   console.log("MODAL APERTO", t.name, categoria, sezione);
 
   if (typeof window.umami === "function") {
-    window.umami("Trattamento aperto", {
+    window.umami && umami.track("Trattamento aperto", {
       nome: t.name,
       categoria: categoria,
       sezione: sezione,
