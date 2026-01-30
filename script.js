@@ -4,8 +4,12 @@ fetch("treatments.json")
     buildFilters(data.categories);
     buildTreatments(data.categories);
     filterCategories("all");
+
+    // Dopo aver costruito tutto, attiva il tracking sui filtri e toggle categorie
+    initTracking();
   });
 
+/* ---------------- FILTRI ---------------- */
 function buildFilters(categories) {
   const filters = document.getElementById("filters");
   filters.innerHTML = "";
@@ -17,6 +21,7 @@ function buildFilters(categories) {
     document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
     allBtn.classList.add("active");
     filterCategories("all");
+    trackUmamiEvent("Filtro cliccato", { filtro: "Tutti" });
   };
   filters.appendChild(allBtn);
 
@@ -31,11 +36,13 @@ function buildFilters(categories) {
       document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       filterCategories(cat.id);
+      trackUmamiEvent("Filtro cliccato", { filtro: cat.label });
     };
     filters.appendChild(btn);
   });
 }
 
+/* ---------------- TRATTAMENTI ---------------- */
 function buildTreatments(categories) {
   const container = document.getElementById("treatments");
   container.innerHTML = "";
@@ -57,10 +64,16 @@ function buildTreatments(categories) {
       `;
 
       header.onclick = () => {
+        const wasOpen = card.classList.contains("open");
         document.querySelectorAll(".category.open").forEach(open => {
           if (open !== card) open.classList.remove("open");
         });
         card.classList.toggle("open");
+
+        trackUmamiEvent("Categoria toggle", {
+          sezione: section.title,
+          aperta: !wasOpen
+        });
       };
 
       const content = document.createElement("div");
@@ -109,9 +122,10 @@ function filterCategories(id) {
   });
 }
 
-/* MODAL */
+/* ---------------- MODAL TRATTAMENTO ---------------- */
 const modal = document.getElementById("treatmentModal");
 const closeModal = document.getElementById("closeModal");
+let modalOpenTime = null;
 
 function trackUmamiEvent(eventName, props) {
   if (window.umami && typeof umami.track === "function") {
@@ -131,6 +145,10 @@ function openTreatmentModal(t, categoria, sezione) {
 
   console.log("MODAL APERTO", t.name, categoria, sezione);
 
+  // Salva l'orario di apertura
+  modalOpenTime = Date.now();
+
+  // Traccia apertura trattamento
   trackUmamiEvent("Trattamento aperto", {
     nome: t.name,
     categoria: categoria,
@@ -139,8 +157,31 @@ function openTreatmentModal(t, categoria, sezione) {
   });
 }
 
+// Funzione di chiusura modal con tracking tempo
+function closeTreatmentModal() {
+  if (modalOpenTime) {
+    const durationMs = Date.now() - modalOpenTime;
+    const durationSec = Math.round(durationMs / 1000);
+    const treatmentName = document.getElementById("modalTitle").textContent;
 
-closeModal.onclick = () => modal.classList.remove("open");
+    trackUmamiEvent("Durata trattamento", {
+      nome: treatmentName,
+      durata_secondi: durationSec
+    });
+
+    modalOpenTime = null;
+  }
+  modal.classList.remove("open");
+}
+
+closeModal.onclick = closeTreatmentModal;
 modal.onclick = e => {
-  if (e.target === modal) modal.classList.remove("open");
+  if (e.target === modal) closeTreatmentModal();
 };
+
+/* ---------------- INIZIALIZZA TRACCIAMENTO FILTRI E TOGGLE ---------------- */
+function initTracking() {
+  // Filtri già tracciati nel buildFilters con trackUmamiEvent
+
+  // Toggle categorie già tracciati nel buildTreatments con header.onclick
+}
