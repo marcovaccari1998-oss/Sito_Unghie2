@@ -136,7 +136,8 @@ function trackUmamiEvent(eventName, props) {
 function openTreatmentModal(t, categoria, sezione) {
   document.getElementById("modalTitle").textContent = t.name;
   document.getElementById("modalMeta").textContent = `${t.price}€ · ${t.duration}`;
-  document.getElementById("modalDescription").textContent = t.description;
+  document.getElementById("modalDescription").innerHTML =
+    t.description.replace(/\n/g, "<br>");
   document.getElementById("modalImage").src = t.image;
   modal.classList.add("open");
 
