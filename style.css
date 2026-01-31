@@ -270,9 +270,10 @@ body {
 }
 
 .whatsapp-float img {
-  width: 1000px;
+  width: 42px;
   opacity: 0.75;
   transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: scale(1.5);
 }
 
 .whatsapp-float:hover img {
@@ -314,5 +315,6 @@ body {
 .instagram-link:hover img {
   opacity: 1;
   transform: scale(1.05);
+
 
 }
