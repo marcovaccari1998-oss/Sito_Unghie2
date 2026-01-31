@@ -67,7 +67,7 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
   font-weight: 700;
   font-size: 16px;
-  background: #CFE3EB;
+  background: rgb(200, 230, 255);
 }
 
 /* CONTENUTO */
@@ -270,7 +270,7 @@ body {
 }
 
 .whatsapp-float img {
-  width: 100px;
+  width: 1000px;
   opacity: 0.75;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
