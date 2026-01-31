@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #1f3c88;
+  --bg-color: #09197E;
   --card-bg: rgba(255,255,255,0.12);
   --card-bg-active: rgba(255,255,255,0.18);
   --text-main: #ffffff;
@@ -47,11 +47,11 @@ body {
   min-width: 110px;
   padding: 12px;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 15px;
   border-radius: var(--radius);
   border: none;
-  background: white;
-  color: #1a1a1a;
+  background: #CFE3EB;
+  color: #09197E;
   display: flex;
   flex-direction: column;
   align-items: center;
