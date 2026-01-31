@@ -57,7 +57,7 @@ function buildTreatments(categories) {
           <span>${section.title}</span>
           ${section.fromPrice ? `<span class="section-price">(da ${section.fromPrice}€)</span>` : ""}
         </div>
-        <span class="toggle">+</span>
+        <span class="toggle">›</span>
       `;
 
       header.onclick = () => {
