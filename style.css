@@ -53,20 +53,18 @@ body {
   background: #CFE3EB;
   color: #09197E;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
+  align-items: center;        /* centro verticale */
+  justify-content: center;    /* centro orizzontale */
+  /*white-space: nowrap;        /* 🔥 niente a capo */
   cursor: pointer;
   transition: transform var(--transition), box-shadow var(--transition);
 }
-.filter-btn img {
-  width: 48px;
-  height: 48px;
-}
+
 .filter-btn.active {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  font-weight: 600;
+  font-weight: 800;
+  font-size: 18px;
 }
 
 /* CONTENUTO */
@@ -158,12 +156,12 @@ body {
 
 /* FOOTER */
 .footer {
-  margin-top: 40px;
+  margin-top: 00px;
   padding: 24px 16px;
   text-align: center;
-  font-size: 13px;
+  font-size: 20px;
   color: var(--text-secondary);
-  opacity: 0.7;
+  opacity: 1;
 }
 
 /* MODAL */
@@ -281,19 +279,21 @@ body {
 }
 
 .site-footer {
-  margin: 40px 0 80px;
+  margin: 0px 0 40px;
   display: flex;
   justify-content: center;
+  gap: 20px;
 }
 
 .site-footer img {
-  width: 24px;
+  width: 42px;
   opacity: 0.7;
   transition: opacity 0.2s ease;
 }
 
 .site-footer img:hover {
   opacity: 1;
+  transform: scale(1.1);
 }
 
 .treatment-name {
@@ -304,7 +304,7 @@ body {
 }
 
 .instagram-link img {
-  width: 34px;
+  width: 42px;
   opacity: 0.75;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
