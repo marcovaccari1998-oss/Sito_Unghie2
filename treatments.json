@@ -14,14 +14,14 @@
               "price": 20,
               "duration": "30 min",
               "description": "La kombi manicure è una tecnica avanzata di preparazione a secco dell'unghia che unisce l'uso della fresa e le forbicine per cuticole. Permette una pulizia profonda del giro cuticole, il sollevamento e la rimozione precisa della pelle in eccesso senza acqua, ideale per l'applicazione di smalto semipermanente o gel.",
-              "image": "Img_Trattamenti/Manicure_Ad_Olio/2.jpg"
+              "image": "logo.png"
             },
             {
               "name": "Manicure ad olio",
               "price": 25,
               "duration": "30 min",
               "description": "La manicure ad olio è un trattamento estetico intensivo che utilizza oli specifici per nutrire, idratare e ammorbidire le cuticole. Spesso integrata nella kombi manicure per lavorare la pelle con maggiore precisione, garantendo un risultato lucente, idratato e levigato. \nConsigliata anche per manicure maschili.",
-              "image": "Img_Trattamenti/Kombi_Manicure/1.jpg"
+              "image": "logo.png"
             }
           ]
         },
