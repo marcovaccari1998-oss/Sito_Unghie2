@@ -197,11 +197,11 @@ body {
 }
 
 .info-icon {
-  width: 18px;
-  height: 18px;
+  width: 12px;
+  height: 12px;
   border: 1.5px solid currentColor;
   border-radius: 50%;
-  font-size: 12px;
+  font-size: 8px;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
