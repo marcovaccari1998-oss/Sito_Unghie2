@@ -46,7 +46,7 @@ body {
 .filter-btn {
   min-width: auto;
   padding: 12px 16px;
-  white-space: normal;
+  /*white-space: normal;*/
   height: auto;
   font-weight: 500;
   font-size: 15px;
@@ -57,7 +57,7 @@ body {
   display: flex;
   align-items: center;        /* centro verticale */
   justify-content: center;    /* centro orizzontale */
-  /*white-space: nowrap;        /* 🔥 niente a capo */
+  white-space: nowrap;        /* 🔥 niente a capo */
   cursor: pointer;
   transition: transform var(--transition), box-shadow var(--transition);
 }
@@ -269,7 +269,7 @@ body {
 }
 
 .whatsapp-float img {
-  width: 42px;
+  width: 100px;
   opacity: 0.75;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }

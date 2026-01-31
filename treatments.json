@@ -63,7 +63,7 @@
           "title": "Gel",
           "fromPrice": 50,
           "notes": {
-            "-": "Tutti i trattamenti sono comprensivi di nail art base. Per nail art più complesse potrebbe essere richiesto un supplemento. \nIl french è compreso nel prezzo solo se eseguito su base gel. \nTutti i refill sono da intendersi correttivi, poichè lavoro solo con tecnica slim, natural slim e balance."
+            "": "Tutti i trattamenti sono comprensivi di nail art base. Per nail art più complesse potrebbe essere richiesto un supplemento. \nIl french è compreso nel prezzo solo se eseguito su base gel. \nTutti i refill sono da intendersi correttivi, poichè lavoro solo con tecnica slim, natural slim e balance."
           },
           "treatments": [
             {
@@ -105,7 +105,7 @@
               "name": "Riparazione 1 unghia",
               "price": "da 2",
               "duration": "10 min",
-              "description": "Riparazione di 1 unghia in fase di refill 2€. \nRiparazione di 1 unghia con appuntamento specifico 4€. \nCon più di 3 unghie da riparare in fase di refill il costo sarà pari a quello di una ricostruzione.",
+              "description": "Riparazione di 1 unghia in fase di refill 2€. \nCon più di 3 unghie da riparare in fase di refill il costo sarà pari a quello di una ricostruzione. \n\nRiparazione di 1 unghia con appuntamento specifico 4€.",
               "image": "logo.png"
             },
             {
@@ -265,21 +265,21 @@
           "fromPrice": 15,
           "treatments": [
             {
-              "name": "Inguine totale*",
+              "name": "Inguine totale",
               "price": 30,
               "duration": "30 min",
               "description": "L'epilazione inguine totale con cera brasiliana è un trattamento di rimozione totale dei peli nell'area intima (pube, labbra, zona perianale), effettuato senza strisce di tessuto. Utilizza una speciale cera che ingloba il pelo, agendo in modo più delicato e meno doloroso rispetto alla ceretta classica. \nLa cera brasiliana si applica direttamente e si rimuove una volta solidificata, senza aderire alla pelle.\nÈ perfetta per zone delicate perché riduce il rischio di peli incarniti e irritazioni. \nIl risultato dura solitamente tra le 4 e le 6 settimane, indebolendo il pelo nel tempo.\nÈ efficace anche su peli corti.",
               "image": "logo.png"
             },
             {
-              "name": "Inguine bikini*",
+              "name": "Inguine bikini",
               "price": 25,
               "duration": "30 min",
               "description": "L'epilazione inguine bikini con cera brasiliana è un trattamento di rimozione dei peli nell'area intima (Esterno inguine, pube, labbra esterne), effettuato senza strisce di tessuto. Utilizza una speciale cera che ingloba il pelo, agendo in modo più delicato e meno doloroso rispetto alla ceretta classica. \nLa cera brasiliana si applica direttamente e si rimuove una volta solidificata, senza aderire alla pelle.\nÈ perfetta per zone delicate perché riduce il rischio di peli incarniti e irritazioni. \nIl risultato dura solitamente tra le 4 e le 6 settimane, indebolendo il pelo nel tempo.\nÈ efficace anche su peli corti. ",
               "image": "logo.png"
             },
             {
-              "name": "Ascelle*",
+              "name": "Ascelle",
               "price": 15,
               "duration": "15 min",
               "description": "L'epilazione ascelle cera brasiliana è un trattamento di rimozione totale dei peli effettuato senza strisce di tessuto. Utilizza una speciale cera che ingloba il pelo, agendo in modo più delicato e meno doloroso rispetto alla ceretta classica. \nLa cera brasiliana si applica direttamente e si rimuove una volta solidificata, senza aderire alla pelle.\nÈ perfetta per zone delicate perché riduce il rischio di peli incarniti e irritazioni. \nIl risultato dura solitamente tra le 4 e le 6 settimane, indebolendo il pelo nel tempo.\nÈ efficace anche su peli corti. ",
