@@ -46,6 +46,8 @@ body {
 .filter-btn {
   min-width: 110px;
   padding: 12px;
+  font-weight: 500;
+  font-size: 14px;
   border-radius: var(--radius);
   border: none;
   background: white;
@@ -206,7 +208,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.5;
+  opacity: 0.45;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
@@ -310,6 +312,5 @@ body {
 .instagram-link:hover img {
   opacity: 1;
   transform: scale(1.05);
-
 
 }

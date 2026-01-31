@@ -28,10 +28,7 @@ function buildFilters(categories) {
   categories.forEach(cat => {
     const btn = document.createElement("button");
     btn.className = "filter-btn";
-    btn.innerHTML = `
-      <span>${cat.label}</span>
-      ${cat.icon ? `<img src="${cat.icon}" alt="">` : ""}
-    `;
+    btn.innerHTML = `<span>${cat.label}</span>`;
     btn.onclick = () => {
       document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
