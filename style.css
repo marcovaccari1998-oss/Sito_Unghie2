@@ -206,7 +206,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.45;
+  opacity: 0.5;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
@@ -310,5 +310,6 @@ body {
 .instagram-link:hover img {
   opacity: 1;
   transform: scale(1.05);
+
 
 }
