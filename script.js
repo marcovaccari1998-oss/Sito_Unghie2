@@ -88,7 +88,7 @@ function buildTreatments(categories) {
           <div class="treatment-header">
             <span class="treatment-name">
               ${t.name}
-              <span class="open-icon">›</span>
+              <span class="open-icon info-icon">i</span>
             </span>
             <span class="price">${t.price}€</span>
           </div>

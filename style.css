@@ -196,8 +196,23 @@ body {
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
+.info-icon {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.45;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+
 .treatment:hover .open-icon {
-  transform: translateX(3px);
+  transform: scale(1.1);
   opacity: 0.8;
 }
 
