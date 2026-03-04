@@ -1,44 +1,29 @@
 :root {
-  --bg-color: #09197E;
-  --card-bg: rgba(255,255,255,0.12);
-  --card-bg-active: rgba(255,255,255,0.18);
-  --text-main: #ffffff;
-  --text-secondary: #dbe2ff;
+  --bg-color: linear-gradient(180deg,#0F3F3C 0%, #0C2F2C 60%, #092423 100%);
+  --card-bg: rgba(244, 239, 230, 0.08);
+  --card-bg-active: rgba(244, 239, 230, 0.14);
+  --text-main: #F4EFE6;
+  --text-secondary: #D8CEC0;
   --radius: 16px;
   --transition: 0.25s ease;
 }
 
 * { box-sizing: border-box; }
 
+html {
+  background-color: #092423;
+}
+
 body {
   margin: 0;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  min-height: 100svh;
   line-height: 1.5;
-  background: var(--bg-color);
+  background-color: #092423;
+  background-image: var(--bg-color);
   color: var(--text-main);
+  overscroll-behavior: none;
 }
-
-body,
-button,
-span,
-div,
-p,
-a {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-}
-
-.section-note,
-.section-price,
-.modal-meta,
-.duration {
-  font-size: 15px;
-  letter-spacing: 1px;
-  font-weight: 400;
-}
-
 
 /* HEADER */
 .header {
@@ -52,8 +37,8 @@ a {
 .site-title {
   margin-top: 4px;
   font-family: 'Playfair Display SC', serif;
-  letter-spacing: 1.5px;
-  font-weight: 400;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
 .address {
   font-size: 13px;
@@ -68,30 +53,21 @@ a {
   overflow-x: auto;
 }
 .filter-btn {
-  min-width: auto;
   padding: 12px 16px;
-  /*white-space: normal;*/
-  height: auto;
   font-weight: 500;
   font-size: 15px;
   border-radius: var(--radius);
   border: none;
-  background: #CFE3EB;
-  color: #09197E;
-  display: flex;
-  align-items: center;        /* centro verticale */
-  justify-content: center;    /* centro orizzontale */
-  white-space: nowrap;        /* 🔥 niente a capo */
+  background: #E8DFD2;
+  color: #0F3F3C;
   cursor: pointer;
   transition: transform var(--transition), box-shadow var(--transition);
 }
-
 .filter-btn.active {
   transform: translateY(-2px);
+  background: #1E6F6A;
+  color: #F4EFE6;
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  font-weight: 700;
-  font-size: 16px;
-  background: rgb(200, 230, 255);
 }
 
 /* CONTENUTO */
@@ -122,11 +98,6 @@ a {
   font-size: 18px;
   cursor: pointer;
 }
-.category-header .left {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
 .section-price {
   font-size: 14px;
   opacity: 0.7;
@@ -135,31 +106,21 @@ a {
 .toggle {
   margin-left: auto;
   font-size: 22px;
-  transform: rotate(90deg); /* freccia verso il basso */
+  transform: rotate(90deg);
   transition: transform var(--transition);
   opacity: 0.7;
 }
-
 .category.open .toggle {
-  transform: rotate(-90deg); /* freccia verso l’alto */
+  transform: rotate(-90deg);
 }
 
 /* ACCORDION */
 .category-content {
   display: none;
   padding: 0 16px 16px;
-  opacity: 0;
-  transform: translateY(-6px);
 }
 .category.open .category-content {
   display: block;
-  animation: accordionOpen 0.25s ease forwards;
-}
-@keyframes accordionOpen {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* TRATTAMENTI */
@@ -171,28 +132,20 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.duration {
-  font-size: 13px;
-  color: var(--text-secondary);
-}
 
 /* NOTE */
 .section-note {
   margin-top: 14px;
   font-size: 13px;
   color: var(--text-secondary);
-  opacity: 0.85;
-  line-height: 1.4;
 }
 
 /* FOOTER */
 .footer {
-  margin-top: 00px;
   padding: 24px 16px;
   text-align: center;
   font-size: 20px;
   color: var(--text-secondary);
-  opacity: 1;
 }
 
 /* MODAL */
@@ -205,142 +158,47 @@ a {
   justify-content: center;
   z-index: 999;
 }
-.treatment {
-  cursor: pointer;
-}
-
-.treatment-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.treatment-right {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.open-icon {
-  font-size: 18px;
-  opacity: 0.4;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.info-icon {
-  width: 12px;
-  height: 12px;
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
-  font-size: 8px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.45;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-
-.treatment:hover .open-icon {
-  transform: scale(1.1);
-  opacity: 0.8;
-}
-
 .modal.open {
   display: flex;
 }
+
+/* QUI È LA DIFFERENZA */
 .modal-content {
-  background: var(--bg-color);
+  background: linear-gradient(180deg,#0F3F3C 0%, #0C2F2C 60%, #092423 100%);
+  color: #F4EFE6;
   width: 100%;
   height: 100%;
   padding: 20px;
   overflow-y: auto;
-  animation: modalUp 0.25s ease;
 }
-@keyframes modalUp {
-  from { transform: translateY(30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
+
 .modal-close {
   background: none;
   border: none;
-  color: white;
+  color: #F4EFE6;
   font-size: 28px;
   position: absolute;
   top: 16px;
   right: 16px;
   cursor: pointer;
 }
+
+/* keep the treatment image from growing too large */
 .modal-image {
   width: 100%;
   max-width: 200px;
   display: block;
   margin: 40px auto 20px;
 }
+
 .modal-meta {
   text-align: center;
   font-size: 14px;
-  opacity: 0.8;
+  color: #D8CEC0;
   margin-bottom: 16px;
 }
+
 #modalTitle {
   text-align: center;
   margin-bottom: 8px;
-}
-
-.whatsapp-float {
-  position: static;
-  width: auto;
-  height: auto;
-  background: none;
-  box-shadow: none;
-}
-
-.whatsapp-float img {
-  width: 42px;
-  opacity: 0.75;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.whatsapp-float:hover img {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-.site-footer {
-  margin: 0px 0 40px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.site-footer img {
-  width: 42px;
-  opacity: 0.7;
-  transition: opacity 0.2s ease;
-}
-
-.site-footer img:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-.treatment-name {
-  font-weight: 400;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.instagram-link img {
-  width: 42px;
-  opacity: 0.75;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.instagram-link:hover img {
-  opacity: 1;
-  transform: scale(1.05);
-
 }
